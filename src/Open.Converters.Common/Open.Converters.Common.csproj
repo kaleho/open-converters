@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
+    <Authors>Raymond A. Kaleho</Authors>
+    <Company>Kaleho Contributors</Company>
+    <RepositoryUrl>https://github.com/kaleho/open-converters</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/kaleho/open-converters</PackageProjectUrl>
+    <PackageTags>converters conversion</PackageTags>
+    <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
+    <Description>Converting from one thing to another is a solved problem. In most cases an extension method suffices quite nicely. However, as a solution increases in complexity, I find myself wanting to implement an injection/discovery mechanism based on capabilities. I prefer the `try with out parameter that returns a bool of success` paradigm.  This is an opinionated suggestion for doing that.</Description>
+    <RootNamespace>Open.Converters</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.7" />
+    <PackageReference Include="Open.Fx" Version="0.0.1-alpha-004-initial-build" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\.assets\images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\LICENSE.TXT">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+
+</Project>

@@ -28,8 +28,6 @@ jobs:
           RUN_NUMBER=$(seq -f "%03g" $GITHUB_RUN_NUMBER $GITHUB_RUN_NUMBER)
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
           echo "VERSION=$SEMVER-$SUFFIX-$RUN_NUMBER" >> $GITHUB_ENV
-          # echo "::set-env name=BRANCH::$BRANCH"
-          # echo "::set-env name=VERSION::$SEMVER-$SUFFIX-$RUN_NUMBER"
         shell: bash
 
       - name: log runtime variables

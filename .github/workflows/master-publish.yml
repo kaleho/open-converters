@@ -24,8 +24,8 @@ jobs:
         run: |
           # Set value locally to be be used in the following lines
           BRANCH=$(git rev-parse --abbrev-ref HEAD)
-          echo "::set-env name=BRANCH::$BRANCH"
-          echo "::set-env name=VERSION::$SEMVER"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          echo "VERSION=$SEMVER" >> $GITHUB_ENV
         shell: bash
 
       - name: log runtime variables

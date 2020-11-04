@@ -29,9 +29,9 @@ jobs:
           SEARCH=feature/
           FEATURE="${BRANCH/$SEARCH/}"
           RUN_NUMBER=$(seq -f "%03g" $GITHUB_RUN_NUMBER $GITHUB_RUN_NUMBER)
-          echo "::set-env name=BRANCH::$BRANCH"
-          echo "::set-env name=FEATURE::$FEATURE"
-          echo "::set-env name=VERSION::$SEMVER-$SUFFIX-$RUN_NUMBER-$FEATURE"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          echo "FEATURE=$FEATURE" >> $GITHUB_ENV
+          echo "VERSION=$SEMVER-$SUFFIX-$RUN_NUMBER-$FEATURE" >> $GITHUB_ENV
         shell: bash
 
       - name: log runtime variables
